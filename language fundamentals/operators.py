@@ -1,0 +1,10 @@
+print(10//3)
+print(3**2)
+print(10%3)
+print(True & True)
+print(False & False)
+print(True & False)
+print(True | False)
+print(False | True)
+print(True ^ False)
+
