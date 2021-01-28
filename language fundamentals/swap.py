@@ -1,7 +1,5 @@
 n1=10
 n2=20
-
-
-
-n1,n2=n2,n1
-print(n1,n2)
+t=n1
+n1=n2
+n2=print ("After swapping n1=",n1,"n2=",n2)
