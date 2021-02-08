@@ -5,3 +5,4 @@ for i in lst:
         if (i+j==num)&(i!=j):
             print(i,j)
             break
+
