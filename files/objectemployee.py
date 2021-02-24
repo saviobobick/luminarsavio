@@ -21,4 +21,4 @@ for emp in employees:
 max=(max(high))
 for emp in employees:
     if max==emp.sal:
-        print(employee.details)
+        print(emp.details())
