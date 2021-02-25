@@ -9,7 +9,7 @@ class employee:
         return self.name
     def details(self):
         return self.id,self.name,self.desig,self.sal,self.exp
-f=open("employee","r")
+f=open("../files/employee", "r")
 employees=[]
 high=[]
 for lines in f:
@@ -22,3 +22,5 @@ max=(max(high))
 for emp in employees:
     if max==emp.sal:
         print(emp.details())
+uppname=list(map(lambda emp:emp.name.upper(),employees))
+print(uppname)
