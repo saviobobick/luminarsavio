@@ -4,23 +4,17 @@ class employee:
         self.name=name
         self.desig=desig
         self.sal=sal
-        self.exp=exp
+        self.exp=int(exp)
     def __str__(self):
         return self.name
     def details(self):
         return self.id,self.name,self.desig,self.sal,self.exp
 f=open("employee", "r")
 employees=[]
-high=[]
 for lines in f:
     id,name,desig,sal,exp=lines.rstrip("\n").split(",")
     employees.append(employee(id,name,desig,sal,exp))
-for emp in employees:
-    print(emp)
-    high.append(emp.sal)
-max=(max(high))
-for emp in employees:
-    if max==emp.sal:
-        print(emp.details())
-uppname=list(map(lambda emp:emp.name.upper(),employees))
-print(uppname)
+print(list(map(lambda emp:emp.name,(list(filter(lambda emp:emp.desig=="developer",employees))))))
+print(max(list(map(lambda emp:emp.sal,employees))))
+print(len(list(filter(lambda emp:emp.desig=="qa",employees))))
+print(list(map(lambda emp:emp.name,list(filter(lambda emp:emp.exp>1,employees)))))
