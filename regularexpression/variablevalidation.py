@@ -1,0 +1,8 @@
+from re import *
+rule="[a-kA-K][369][a-zA-Z0-9]*"
+variablename=input("Enter variable name:")
+matcher=fullmatch(rule,variablename)
+if matcher!=None:
+    print("Valid")
+else:
+    print("Invalid")

@@ -9,8 +9,8 @@ from re import *
 #pattern="\d"#checking digits
 #pattern="\D"#except digits
 #pattern="\w"#all words
-#pattern='[\s]'
-pattern="ab"
+pattern=r'\\s'
+# pattern="ab"
 source="ababa\sbbbab"
 matcher=finditer(pattern,source)
 cnt=0
